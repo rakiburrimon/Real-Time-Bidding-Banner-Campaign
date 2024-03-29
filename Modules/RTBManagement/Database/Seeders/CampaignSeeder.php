@@ -3,14 +3,15 @@
 namespace Modules\RTBManagement\Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Modules\RTBManagement\App\Models\Campaign;
 
-class RTBManagementDatabaseSeeder extends Seeder
+class CampaignSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        // $this->call([]);
+        Campaign::factory()->count(100)->create();
     }
 }
