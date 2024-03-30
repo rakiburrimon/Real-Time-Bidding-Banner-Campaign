@@ -13,9 +13,17 @@ return new class extends Migration
     {
         Schema::create('bid_requests', function (Blueprint $table) {
             $table->id();
-            $table->json('request_data');
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->string('request_id');
+            $table->json('imp');
+            $table->json('app');
+            $table->json('device');
+            $table->json('user');
+            $table->integer('at');
+            $table->integer('tmax');
+            $table->json('cur');
+            $table->json('bcat');
+            $table->json('source');
+            $table->json('ext');
             $table->timestamps();
         });
     }
