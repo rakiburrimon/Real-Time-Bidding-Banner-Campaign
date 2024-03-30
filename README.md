@@ -18,7 +18,35 @@ Before testing the API endpoints, ensure you have completed the following tasks:
 
 ## Authentication
 
-Authentication is required to access the API endpoints. Please refer to the authentication documentation for more details.
+Authentication is required to access the API endpoints. This API uses Laravel Sanctum for token-based authentication.
+
+### Token Generation
+
+To generate an authentication token, you need to first log in to the system using the `/login` endpoint. This endpoint will return an API token that you can use for subsequent requests.
+
+#### Login
+- **URL:** `/login`
+- **Method:** `POST`
+- **Description:** Logs in a user and generates an authentication token.
+- **Request Body:** Provide user credentials (email and password) in the request body.
+- **Authentication:** Not required for this endpoint.
+
+Once you receive the token, include it in the request headers for all authenticated endpoints:
+
+### Note:
+- Replace `{your_api_token}` with the token received after login.
+
+## Prerequisites
+
+Before testing the API endpoints, ensure you have completed the following tasks:
+
+1. **Set Up Environment:** Make sure you have PHP and Laravel installed on your system.
+
+2. **Database Migration:** Migrate the database schema by running the following command:
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   php artisan migrate
 
 ## Endpoints
 
