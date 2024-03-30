@@ -1,0 +1,11 @@
+{
+    "name": "RTBManagement",
+    "alias": "rtbmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\RTBManagement\\App\\Providers\\RTBManagementServiceProvider"
+    ],
+    "files": []
+}
